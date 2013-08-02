@@ -3,6 +3,7 @@ package com.intalker.openshelf.data;
 import com.intalker.openshelf.isbn.parser.BookInfoParser;
 
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 
 public class BookInfo {
 	private String mISBN = "";
@@ -36,8 +37,16 @@ public class BookInfo {
 		bookInfo.setPublisher(mPublisher);
 		try {
 			if (null != mCoverImage) {
-				bookInfo.setCoverImage(mCoverImage.copy(
-						mCoverImage.getConfig(), true));
+				Config cfg = mCoverImage.getConfig();
+				if (null != cfg)
+				{
+					Bitmap bmp = mCoverImage.copy(cfg, true);
+					bookInfo.setCoverImage(bmp);
+				}
+				else
+				{
+					bookInfo.setCoverImage(mCoverImage);
+				}
 			}
 		} catch (Error err) {
 
