@@ -10,7 +10,6 @@ import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.data.UserInfo;
 import com.intalker.openshelf.isbn.ISBNResolver;
-import com.intalker.openshelf.ui.BookInfoPanel;
 import com.intalker.openshelf.ui.control.HaloButton;
 import com.intalker.openshelf.util.DensityAdaptor;
 import com.intalker.openshelf.util.DeviceUtil;

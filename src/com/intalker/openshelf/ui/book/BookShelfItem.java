@@ -8,7 +8,6 @@ import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.data.MessageInfo;
 import com.intalker.openshelf.notification.NotificationManager;
-import com.intalker.openshelf.ui.BookInfoPanel;
 import com.intalker.openshelf.ui.control.HaloButton;
 import com.intalker.openshelf.ui.social.BookOwnersDialog;
 import com.intalker.openshelf.ui.social.IncomeMessagesDialog;

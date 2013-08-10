@@ -1,4 +1,4 @@
-package com.intalker.openshelf.ui;
+package com.intalker.openshelf.ui.book;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -23,7 +23,8 @@ import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;
 import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.isbn.ISBNResolver;
-import com.intalker.openshelf.ui.book.BookShelfItem;
+import com.intalker.openshelf.ui.FullSizeImageDialog;
+import com.intalker.openshelf.ui.UIConfig;
 import com.intalker.openshelf.ui.control.ControlFactory;
 import com.intalker.openshelf.ui.control.FlipPanel;
 import com.intalker.openshelf.ui.control.HaloButton;
