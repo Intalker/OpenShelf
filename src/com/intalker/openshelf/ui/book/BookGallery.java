@@ -10,6 +10,7 @@ import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.data.UserInfo;
 import com.intalker.openshelf.isbn.ISBNResolver;
+import com.intalker.openshelf.ui.BookInfoPanel;
 import com.intalker.openshelf.ui.control.HaloButton;
 import com.intalker.openshelf.util.DensityAdaptor;
 import com.intalker.openshelf.util.DeviceUtil;
@@ -35,7 +36,7 @@ public class BookGallery extends RelativeLayout {
 	private HaloButton mClearBtn = null;
 	private HaloButton mScanBtn = null;
 	private UserInfo mCurOwner = null;
-	private BookDetailDialog mDetailDialog = null;
+	private BookInfoPanel mBookInfoPanel = null;
 	
 	public BookGallery(Context context) {
 		super(context);
@@ -43,11 +44,11 @@ public class BookGallery extends RelativeLayout {
 		createUI();
 	}
 	
-	public BookDetailDialog getBookDetailDialog() {
-		if (null == mDetailDialog) {
-			mDetailDialog = new BookDetailDialog(this.getContext());
+	public BookInfoPanel getBookInfoPanel() {
+		if (null == mBookInfoPanel) {
+			mBookInfoPanel = new BookInfoPanel(this.getContext());
 		}
-		return mDetailDialog;
+		return mBookInfoPanel;
 	}
 	
 	public UserInfo getCurOwner() {

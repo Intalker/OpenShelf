@@ -85,6 +85,7 @@ public class Rotate3dAnimation extends Animation {
         }
 //        camera.rotateZ(degrees);
         camera.rotateY(degrees);
+//        camera.rotateX(degrees);
 //        Log.i("Degree>>>>", String.valueOf(degrees));
         camera.getMatrix(matrix);
         camera.restore();

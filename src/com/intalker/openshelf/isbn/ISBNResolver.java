@@ -133,8 +133,8 @@ public class ISBNResolver {
 				mBookShelfItem.setDetailInfo(isbnParser.getBookName(),
 						isbnParser.getAuthor(), isbnParser.getPublisher(),
 						isbnParser.getPageCount(), isbnParser.getDescription());
-				HomeActivity.getApp().getBookGallery().getBookDetailDialog()
-						.setInfo(mBookShelfItem);
+				HomeActivity.getApp().getBookGallery().getBookInfoPanel()
+						.setData(mBookShelfItem);
 				
 				mBookShelfItem.getInfo().cacheData();
 				return;

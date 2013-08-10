@@ -36,24 +36,23 @@ public class FlipPanel extends Dialog {
     public void show() {
         // TODO Auto-generated method stub
         super.show();
+        mViewA.setVisibility(View.VISIBLE);
+        mViewB.setVisibility(View.INVISIBLE);
+        mViewA.requestFocus();
 
-        AnimationSet animSet = new AnimationSet(true);
-        AlphaAnimation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);
-//        alphaAnimation.setDuration(300);
-        alphaAnimation.setFillAfter(true);
-//        alphaAnimation.setInterpolator(new DecelerateInterpolator());
+//        AnimationSet animSet = new AnimationSet(true);
+//        AlphaAnimation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);
+//        alphaAnimation.setFillAfter(true);
         
-        ScaleAnimation scaleAnimation = new ScaleAnimation(0.1f, 1.0f, 0.1f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-//        scaleAnimation.setDuration(300);
-        scaleAnimation.setFillAfter(true);
-//        scaleAnimation.setInterpolator(new DecelerateInterpolator());
+//        ScaleAnimation scaleAnimation = new ScaleAnimation(3.5f, 1.0f, 3.5f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+//        scaleAnimation.setFillAfter(true);
         
-        animSet.addAnimation(alphaAnimation);
-        animSet.addAnimation(scaleAnimation);
-        animSet.setInterpolator(new DecelerateInterpolator());
-        animSet.setDuration(500);
-        
-        mContent.startAnimation(animSet);
+//        animSet.addAnimation(alphaAnimation);
+//        animSet.addAnimation(scaleAnimation);
+//        animSet.setInterpolator(new DecelerateInterpolator());
+//        animSet.setDuration(2000);
+//        
+//        mContent.startAnimation(animSet);
     }
 
     private void createUI(Context context) {
