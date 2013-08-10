@@ -1,6 +1,6 @@
 package com.intalker.openshelf.ui.control;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 
 import android.content.Context;
 import android.view.Gravity;

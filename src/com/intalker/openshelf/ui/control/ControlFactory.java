@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ImageView.ScaleType;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 
 public class ControlFactory {
 	public static View createHoriSeparatorForRelativeLayout(Context context,

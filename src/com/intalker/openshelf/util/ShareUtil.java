@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 import com.intalker.openshelf.data.BookInfo;
 

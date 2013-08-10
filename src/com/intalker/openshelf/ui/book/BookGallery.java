@@ -2,7 +2,7 @@ package com.intalker.openshelf.ui.book;
 
 import java.util.ArrayList;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 import com.intalker.openshelf.cloud.CloudAPI;
 import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;

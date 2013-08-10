@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.intalker.borrow;
+package com.intalker.openshelf;
 
 public final class R {
     public static final class attr {
@@ -77,7 +77,8 @@ public final class R {
         public static final int tip=0x7f02003f;
         public static final int trash=0x7f020040;
         public static final int vert_separator=0x7f020041;
-        public static final int wood_bk=0x7f020042;
+        public static final int white_panel_frame=0x7f020042;
+        public static final int wood_bk=0x7f020043;
     }
     public static final class id {
         public static final int download_icon=0x7f080000;

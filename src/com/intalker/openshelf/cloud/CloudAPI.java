@@ -3,7 +3,7 @@ package com.intalker.openshelf.cloud;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;
 import com.intalker.openshelf.data.UserInfo;
 import com.intalker.openshelf.util.DBUtil;

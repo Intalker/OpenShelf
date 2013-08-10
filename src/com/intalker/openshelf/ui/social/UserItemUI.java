@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 import com.intalker.openshelf.cloud.CloudAPI;
 import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;

@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 import com.intalker.openshelf.cloud.CloudAPI;
 import com.intalker.openshelf.cloud.CloudUtility;

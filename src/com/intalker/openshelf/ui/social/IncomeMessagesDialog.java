@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.MessageInfo;
 import com.intalker.openshelf.ui.UIConfig;

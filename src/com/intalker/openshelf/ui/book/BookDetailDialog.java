@@ -1,6 +1,6 @@
 package com.intalker.openshelf.ui.book;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 import com.intalker.openshelf.cloud.CloudAPI;
 import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;
@@ -8,6 +8,7 @@ import com.intalker.openshelf.data.AppData;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.data.UserInfo;
 import com.intalker.openshelf.isbn.ISBNResolver;
+import com.intalker.openshelf.ui.BookInfoPanel;
 import com.intalker.openshelf.ui.FullSizeImageDialog;
 import com.intalker.openshelf.ui.UIConfig;
 import com.intalker.openshelf.ui.control.ControlFactory;
@@ -200,6 +201,19 @@ public class BookDetailDialog extends Dialog {
 	}
 	
 	private void addListeners() {
+		//[Temp] begin
+		mISBNTextView.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				BookInfoPanel p = new BookInfoPanel(v.getContext());
+				p.setData(mBookItem);
+				p.show();
+			}
+		});
+		
+		//[Temp] end
 		mDeleteButton.setOnClickListener(new View.OnClickListener(){
 
 			@Override

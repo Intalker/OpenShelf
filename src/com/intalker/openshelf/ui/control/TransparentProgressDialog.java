@@ -1,6 +1,6 @@
 package com.intalker.openshelf.ui.control;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.util.DensityAdaptor;
 
 import android.app.Dialog;

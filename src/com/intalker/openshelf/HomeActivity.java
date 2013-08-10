@@ -1,6 +1,6 @@
 package com.intalker.openshelf;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.cloud.CloudAPI;
 import com.intalker.openshelf.cloud.CloudUtility;
 import com.intalker.openshelf.cloud.CloudAPIAsyncTask.ICloudAPITaskListener;

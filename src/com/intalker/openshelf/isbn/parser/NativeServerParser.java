@@ -10,6 +10,8 @@ import java.util.zip.GZIPInputStream;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.widget.Toast;
+
 import com.intalker.openshelf.util.StringUtil;
 import com.intalker.openshelf.util.WebUtil;
 
@@ -27,6 +29,7 @@ public class NativeServerParser extends BookInfoParser {
 
 			HttpURLConnection conn = (HttpURLConnection) new URL(url)
 					.openConnection();
+			//conn.setReadTimeout(20000);
 			conn.setConnectTimeout(8000);
 			conn.setRequestMethod("GET");
 			if (conn.getResponseCode() == 200) {
@@ -63,6 +66,8 @@ public class NativeServerParser extends BookInfoParser {
 				conn.disconnect();
 			}
 		} catch (Exception e) {
+			//[TODO] handle some server connection exception here.
+			// we should show something to user.
 			return;
 		}
 	}

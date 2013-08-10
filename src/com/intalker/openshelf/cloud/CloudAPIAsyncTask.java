@@ -3,7 +3,7 @@ package com.intalker.openshelf.cloud;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.ui.control.TransparentProgressDialog;
 
 public class CloudAPIAsyncTask extends AsyncTask<String, Void, Void> {

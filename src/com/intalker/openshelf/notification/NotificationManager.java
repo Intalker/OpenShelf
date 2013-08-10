@@ -2,7 +2,7 @@ package com.intalker.openshelf.notification;
 
 import java.io.IOException;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 import com.intalker.openshelf.HomeActivity;
 
 import android.app.Service;

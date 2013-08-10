@@ -3,7 +3,7 @@ package com.intalker.openshelf.ui.book;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.intalker.borrow.R;
+import com.intalker.openshelf.R;
 //import com.intalker.openshelf.ui.control.DragRefreshScroll;
 import com.intalker.openshelf.data.BookInfo;
 import com.intalker.openshelf.util.LayoutUtil;
