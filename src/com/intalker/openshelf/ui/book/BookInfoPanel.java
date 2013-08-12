@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -287,8 +288,12 @@ public class BookInfoPanel {
         LinearLayout scrollPanel = new LinearLayout(mContext);
         scrollPanel.setOrientation(LinearLayout.VERTICAL);
         scrollView.addView(scrollPanel);
-        for(int i = 0; i < 10; ++i)
+        for(int i = 0; i < 40; ++i)
         {
+            if (i > 0)
+            {
+                scrollPanel.addView(ControlFactory.createHoriSeparatorForLinearLayout(mContext));
+            }
         	scrollPanel.addView(new NewMessageItemView(mContext));
         }
         RelativeLayout.LayoutParams scrollLP = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
@@ -348,6 +353,8 @@ public class BookInfoPanel {
 		
 		TextView valueText = new TextView(context);
 		valueText.setSingleLine();
+//		valueText.setHorizontallyScrolling(true);
+		valueText.setHorizontalFadingEdgeEnabled(true);
 		valueText.setMovementMethod(new ScrollingMovementMethod());
 		
 		
@@ -362,6 +369,28 @@ public class BookInfoPanel {
 		valueTextLP.topMargin = topMargin + lineHeight;
 		valueTextLP.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 		mDetailInfoPanel.addView(valueText, valueTextLP);
+		
+//		valueText.setOnTouchListener(new View.OnTouchListener() {
+//            
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                // TODO Auto-generated method stub
+//                int code = event.getAction();
+//                TextView tv = (TextView)v;
+//                switch(code)
+//                {
+//                    case MotionEvent.ACTION_DOWN:
+//                        tv.setTextSize(16.0f);
+//                        break;
+//                    case MotionEvent.ACTION_UP:
+//                    case MotionEvent.ACTION_OUTSIDE:
+//                    case MotionEvent.ACTION_CANCEL:
+//                        tv.setTextSize(12.0f);
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
 
 		return valueText;
 	}
