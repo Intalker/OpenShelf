@@ -20,7 +20,8 @@ public class NewMessageItemView extends RelativeLayout {
 	{
 		LinearLayout.LayoutParams mainLP = new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.MATCH_PARENT,
-				DensityAdaptor.getDensityIndependentValue(60));
+				LinearLayout.LayoutParams.WRAP_CONTENT);
+//				DensityAdaptor.getDensityIndependentValue(60));
 		this.setLayoutParams(mainLP);
 		
 		mAvatarView = new BigUserView(context);

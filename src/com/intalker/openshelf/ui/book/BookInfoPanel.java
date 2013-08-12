@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -345,6 +347,10 @@ public class BookInfoPanel {
 		mDetailInfoPanel.addView(label, labelLP);
 		
 		TextView valueText = new TextView(context);
+		valueText.setSingleLine();
+		valueText.setMovementMethod(new ScrollingMovementMethod());
+		
+		
 		valueText.setText("???");
 		valueText.setTextSize(12.0f);
 		valueText.setTextColor(Color.BLACK);
