@@ -29,6 +29,7 @@ import com.intalker.openshelf.ui.control.ControlFactory;
 import com.intalker.openshelf.ui.control.FlipPanel;
 import com.intalker.openshelf.ui.control.HaloButton;
 import com.intalker.openshelf.ui.social.BookOwnersDialog;
+import com.intalker.openshelf.ui.social.NewMessageItemView;
 import com.intalker.openshelf.ui.social.SendMessageDialog;
 import com.intalker.openshelf.ui.social.SendMessageDialog.ISendHandler;
 import com.intalker.openshelf.util.DensityAdaptor;
@@ -272,14 +273,29 @@ public class BookInfoPanel {
         lpB.gravity = Gravity.CENTER;
         mSocialInfoPanel.setLayoutParams(lpB);
         
-        TextView t2 = new TextView(mContext);
-        t2.setText("[TODO]:\nShow social info here.");
-        RelativeLayout.LayoutParams lp2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp2.addRule(RelativeLayout.CENTER_IN_PARENT);
-        t2.setLayoutParams(lp2);
-        mSocialInfoPanel.addView(t2);
-
+//        TextView t2 = new TextView(mContext);
+//        t2.setText("[TODO]:\nShow social info here.");
+//        RelativeLayout.LayoutParams lp2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+//                RelativeLayout.LayoutParams.WRAP_CONTENT);
+//        lp2.addRule(RelativeLayout.CENTER_IN_PARENT);
+//        t2.setLayoutParams(lp2);
+//        mSocialInfoPanel.addView(t2);
+        
+        ScrollView scrollView = new ScrollView(mContext);
+        LinearLayout scrollPanel = new LinearLayout(mContext);
+        scrollPanel.setOrientation(LinearLayout.VERTICAL);
+        scrollView.addView(scrollPanel);
+        for(int i = 0; i < 10; ++i)
+        {
+        	scrollPanel.addView(new NewMessageItemView(mContext));
+        }
+        RelativeLayout.LayoutParams scrollLP = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT);
+//		scrollLP.leftMargin = scrollLP.rightMargin = scrollLP.topMargin = DensityAdaptor
+//				.getDensityIndependentValue(10);
+		scrollLP.bottomMargin = DensityAdaptor.getDensityIndependentValue(50);
+        mSocialInfoPanel.addView(scrollView, scrollLP);
+        
         Button goBackBtn = new Button(mContext);
         goBackBtn.setText("Go Back");
         goBackBtn.setOnClickListener(new View.OnClickListener() {
