@@ -13,7 +13,6 @@ import com.intalker.openshelf.data.InitialCachedDataAsyncTask;
 import com.intalker.openshelf.data.UserInfo;
 import com.intalker.openshelf.isbn.ISBNResolver;
 import com.intalker.openshelf.notification.iGeTuiUtil;
-import com.intalker.openshelf.services.BookInfoSearchExecuator;
 import com.intalker.openshelf.services.InProcessNotificationService;
 import com.intalker.openshelf.services.MessageCheckTimeout;
 import com.intalker.openshelf.services.InProcessNotificationService.LocalBinder;
@@ -25,7 +24,6 @@ import com.intalker.openshelf.ui.login.RegisterView;
 import com.intalker.openshelf.ui.navigation.NavigationPanel;
 import com.intalker.openshelf.ui.social.SocialPanel;
 import com.intalker.openshelf.util.DBUtil;
-import com.intalker.openshelf.util.Debug;
 import com.intalker.openshelf.util.DensityAdaptor;
 import com.intalker.openshelf.util.StorageUtil;
 

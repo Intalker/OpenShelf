@@ -67,8 +67,8 @@ public class ScanUtil {
 	public static void scanBarCode(Activity app)
 	{
 		activity = app;
-		Intent intent = new Intent(activity, com.google.zxing.client.android.CaptureActivity.class);
-		intent.setAction(Intents.Scan.ACTION);
+		Intent intent = new Intent(Intents.Scan.ACTION);
+//		intent.setAction(Intents.Scan.ACTION);
 //		if(checkBSInstall(intent))
 //		{
 //			activity.startActivityForResult(intent, ResultCode.SCAN_RESULT_CODE);
