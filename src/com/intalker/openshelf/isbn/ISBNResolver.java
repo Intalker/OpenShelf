@@ -61,10 +61,10 @@ public class ISBNResolver {
 //			if (DeviceUtil.isFroyo()) {
 //				parser = new DoubanBookInfoParser();
 //			} else {
-//				parser = new DoubanBookInfoParserV2();
+				parser = new DoubanBookInfoParserV2();
 //			}
 			// parser = new OpenISBNBookInfoParser();
-			parser = new NativeServerParser();
+			//parser = new NativeServerParser();
 		}
 		return parser;
 	}

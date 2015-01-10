@@ -2,11 +2,13 @@ package com.intalker.openshelf.util;
 
 import java.util.List;
 
+import com.google.zxing.client.android.Intents;
 import com.intalker.openshelf.config.ResultCode;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -65,14 +67,23 @@ public class ScanUtil {
 	public static void scanBarCode(Activity app)
 	{
 		activity = app;
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-		if(checkBSInstall(intent))
+		Intent intent = new Intent(activity, com.google.zxing.client.android.CaptureActivity.class);
+		intent.setAction(Intents.Scan.ACTION);
+//		if(checkBSInstall(intent))
+//		{
+//			activity.startActivityForResult(intent, ResultCode.SCAN_RESULT_CODE);
+//		}
+//		else
+//		{
+//			showDownloadDialog();
+//		}
+		try
 		{
-			activity.startActivityForResult(intent, ResultCode.SCAN_RESULT_CODE);
+		activity.startActivityForResult(intent, ResultCode.SCAN_RESULT_CODE);
 		}
-		else
+		catch (Exception ex)
 		{
-			showDownloadDialog();
+			ex = null;
 		}
 	}
 }
